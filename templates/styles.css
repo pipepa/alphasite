@@ -1,0 +1,138 @@
+html, body {
+    overflow-x: hidden;
+}
+
+
+
+/* Контейнер для каруселі з обмеженням максимальної ширини */
+.carousel-container {
+    max-width: 1000px;
+}
+
+
+/* Бічна панель */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -280px; /* Приховуємо панель за межами екрану */
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    z-index: 1040;
+}
+
+.sidebar.active {
+    left: 0; /* Висуває панель на екран */
+}
+
+/* Логотип і кнопка закриття */
+.logo-link img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.d-flex.align-items-center.justify-content-between {
+    width: 100%;
+}
+
+/* Кнопка закриття панелі */
+.close-sidebar {
+    margin-bottom: 35px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+}
+
+/* Стиль для кнопки відкриття меню */
+.toggle-sidebar {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    font-size: 1.25em;
+}
+
+/* Прибираємо ефект наведення для обох кнопок */
+.toggle-sidebar:hover, .close-sidebar:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link.active {
+    background-color: #495057;
+}
+
+.user-icon {
+    width: 27.4px;
+    height: 37.5px;
+    margin-right: 6px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+/* Основний контент */
+.content {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+/* Відображаємо панель відкритою на десктопі */
+@media (min-width: 768px) {
+    .sidebar {
+        left: 0; /* Панель відкрита за замовчуванням на великих екранах */
+    }
+    .toggle-sidebar, .close-sidebar {
+        display: none; /* Приховуємо кнопки відкриття і закриття */
+    }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 767px) {
+    .sidebar {
+        left: -280px; /* Панель залишається прихованою на мобільних */
+    }
+    .sidebar.active {
+        left: 0; /* Висувається на мобільних при активності */
+    }
+    .content {
+        margin-left: 0; /* Основний контент займає всю ширину */
+        padding: 15px;
+    }
+    .news-feed {
+        width: 99%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+/* Контейнер для каруселі з обмеженням максимальної ширини */
+.carousel-container {
+    max-width: 800px;
+     /* Центрує карусель у контейнері основного контенту */
+}
+
+/* Фіксована висота каруселі */
+.carouselExampleSlidesOnly {
+    height: 500px; /* Встановіть бажану висоту */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Масштабування зображень для заповнення каруселі */
+.news-feed {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+

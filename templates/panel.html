@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка з бічною панеллю</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<!-- Навігаційна панель з кнопкою (прихована на десктопі) -->
+<nav class="navbar d-md-none" style="background-color: #343a40;">
+    <div class="container-fluid">
+        <button class="btn toggle-sidebar" onclick="toggleSidebar()">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- Бічна панель -->
+<div class="sidebar d-flex flex-column" id="sidebar">
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="/" class="logo-link">
+            <img src="148.png" alt="Логотип" class="logo">
+        </a>
+        <button class="btn close-sidebar d-md-none" onclick="toggleSidebar()">×</button>
+    </div>
+    <hr>
+    
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Головна</a>
+        </li>
+        <li><a href="#" class="nav-link text-white">Якийсь розділ</a></li>
+        <li><a href="#" class="nav-link text-white">Бойова робота</a></li>
+        <li><a href="#" class="nav-link text-white">Забезпечення</a></li>
+        <li><a href="#" class="nav-link text-white">Контакти</a></li>
+    </ul>
+    <hr>
+    
+    <div class="dropdown mt-auto">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+            <img src="dsv.png" alt="Шеврон" class="user-icon">
+            <strong class="user-name">Ім'я Прізвище</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Основний контент -->
+<div class="container content">
+    <h1>Новинна стрічка</h1>
+    <p>Останні новини та оновлення:</p>
+
+    <!-- Новинна стрічка -->
+    <div class="news-feed">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="c1.jpg" class="img-fluid rounded-start" alt="Новина 1">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок новини 1</h5>
+                        <p class="card-text">Короткий опис новини 1. Тут можна розмістити основну інформацію про подію або оновлення.</p>
+                        <p class="card-text"><small class="text-muted">Дата публікації: 01.11.2024</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="c2.jpg" class="img-fluid rounded-start" alt="Новина 2">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок новини 2</h5>
+                        <p class="card-text">Короткий опис новини 2. Тут можна розмістити основну інформацію про подію або оновлення.</p>
+                        <p class="card-text"><small class="text-muted">Дата публікації: 02.11.2024</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="c2.jpg" class="img-fluid rounded-start" alt="Новина 2">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок новини 3</h5>
+                        <p class="card-text">Короткий опис новини 3. Тут можна розмістити основну інформацію про подію або оновлення.</p>
+                        <p class="card-text"><small class="text-muted">Дата публікації: 02.11.2024</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>  <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="c2.jpg" class="img-fluid rounded-start" alt="Новина 2">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок новини 4</h5>
+                        <p class="card-text">Короткий опис новини 4. Тут можна розмістити основну інформацію про подію або оновлення.</p>
+                        <p class="card-text"><small class="text-muted">Дата публікації: 02.11.2024</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Додайте ще картки для новин при необхідності -->
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
